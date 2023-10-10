@@ -24,5 +24,8 @@ public class CD extends Item {
 	public String toString() {
 		return "CD{" + super.toString() + ",numberOfTracks=" + numberOfTracks + '}';
 	}
-	
+
+	public String accept(mediathequeVisitor visitor) {
+		return visitor.visit(this);
+	}
 }
